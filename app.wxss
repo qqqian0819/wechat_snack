@@ -1,0 +1,60 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* 具体商品 */
+.list{
+	background-color: #fcfcf5;
+	padding-left:5%;
+	width: 100%;
+	height: auto;
+}
+.item{
+	padding: 5rpx;
+	margin-top:20rpx;
+	height: 150rpx;
+	width: 90%;
+	border:1px solid #e6e6e6;
+	background-color: #fff;
+	border-radius: 20rpx;
+	box-shadow: 10rpx 10rpx 5rpx #e6e6e6;
+	overflow: hidden;
+	display: flex;
+}
+
+.item > image{
+	width:200rpx;
+	height: 100rpx;
+}
+
+
+.detail{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+.detail title{
+	flex: 1;
+	font-size: 30rpx;
+	font-weight: 400;
+	display: block;
+	overflow: hidden;
+}
+
+price{
+	color:#f00;
+	font-size: 35rpx;
+	margin:10rpx;
+}
+old{
+	color: #888;
+	font-size: 25rpx;
+	text-decoration: line-through;
+}
+
+number  image{
+	width: 40rpx;
+	height : 40rpx;
+}

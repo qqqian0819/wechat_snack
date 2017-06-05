@@ -1,0 +1,38 @@
+{
+    "pages":[
+        "pages/index/index",
+        "pages/cart/cart",
+     
+        "pages/list/list", 
+     
+        "pages/logs/logs"
+    ],
+    "window":{
+        "backgroundTextStyle":"light",
+        "enablePullDownRefresh": true,
+        "navigationBarBackgroundColor": "red",
+        "navigationBarTitleText": "雅风零食铺",
+        "navigationBarTextStyle":"white"
+    },
+    "tabBar": {
+        "color": "#ccc",
+        "selectedColor": "red",
+        "borderStyle": "white",
+        "backgroundColor": "#f9f9f9",
+        "list": 
+        [
+            {
+                "text": "首页",
+                "pagePath": "pages/index/index",
+                "iconPath": "images/home.png",
+                "selectedIconPath": "images/active-home.png"
+            },
+            {
+                "text": "购物车",
+                "pagePath": "pages/logs/logs",
+                "iconPath": "images/car.png",
+                "selectedIconPath": "images/active-car.png"
+            }
+        ]
+    }
+}
