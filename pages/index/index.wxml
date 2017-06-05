@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container">
+	<!--头部 零食铺+搜素框 -->
+	<view class="header">
+		<view class="brand"> {{brand}} </view>
+		<view class="search">
+			<input placeholder="{{search}}" maxlength="20"  placeholder-style="text-align:right"/>
+		</view>
+	</view>
+	<!-- 分类 -->
+	<view>
+		<!--  显示面板指示点 自动播放 自动切换时间间隔 滑动时长1000ms-->
+		<swiper indicator-dots="true" indicator-color="#888" indicator-active-color="yellow" autoplay="true" interval="3000" duration="1000" >
+			<!--嵌套循环 默认index item  for-index/item重新制定 -->
+			<block wx:for="{{sorts}}" wx:for-index="sortindex"  wx:key="allsort">
+				<swiper-item>
+			        <view class="sort">
+			        	<block wx:for="{{sorts[sortindex]}}" wx:for-item="cell" wx:for-index="cellindex" wx:key="itemsort">
+			        		<view>
+				        		<navigator url="./../list/list?sort={{cell.name}}" hover-class="none">
+									<image src="{{cell.img}}"/>
+									<text>{{cell.name}}</text>
+								</navigator>								
+							</view>
+						</block>	        		
+			        </view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	
+	<!-- 商品列表 -->
+	<!-- include/import引用文件 import可以使用目标文件中的特定模版 include相当于拷贝所以-->
+	<import src="../common/common.wxml"/>
+	<!-- 声明需要的使用的模板名,然后将模板所需要的data传入-->
+	<template is="item" data="{{list,num}}"/>
+	
+	<!-- 合计总价 -->
+	<view class="car">
+		<image src="../../images/shopcar.png" alt=""/>
+		<view id="circle">{{num}}</view>
+		<view id="total">总价：￥{{total}}</view>
+		<navigator url="../cart/cart">
+			<view id="orderok">选好了</view>
+		</navigator>
+	</view>
+</view>
+
+
