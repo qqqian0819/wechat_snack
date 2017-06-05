@@ -1,0 +1,101 @@
+/**index.wxss**/
+/*头部 搜索框+名称*/
+.header{
+	background: #f22;
+	width: 100%;
+	height:300rpx;
+	top:0;
+}
+/*名称*/
+.brand{
+	color: #fff;
+	font-size: 70rpx;
+	text-align: center;
+	margin-top:10%;
+}
+.search{
+	display: flex;
+}
+/*搜索框*/
+.search input{
+	flex: 1;
+	border:1px solid #eee;
+	border-radius: 30rpx;
+	background-color: #eee;
+	width: 80%;
+	margin:10rpx 40rpx;
+	text-align: center;
+}
+/* 分类图标 */
+swiper{
+	height: 200rpx;
+}
+.sort{
+	display: flex;
+}
+.sort image{
+	width: 64rpx;
+	height: 64rpx;
+}
+.sort view{
+	flex: 1;
+	margin: 30rpx 50rpx;
+}
+.sort text{
+	display: block;
+	font-weight: 300;
+	font-size: 30rpx;
+}
+
+/* 底部总计 */
+.car{
+	margin-top: 30rpx;
+	background: rgba(255,0,0,0.8);
+	height: 100rpx;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	color: #fff;
+}
+.car image{
+	width: 80rpx;
+	height: 80rpx;
+	margin-top:10rpx;
+	margin-left:20rpx;
+}
+
+#circle{
+	width: 30rpx;
+	height: 30rpx;
+	border-radius: 15rpx;
+	text-align: center;
+	line-height: 30rpx;
+	background: #fff;
+	color:#f00;
+	margin-left:-15rpx; 	
+}
+
+#total{
+	padding-top: 30rpx;
+	flex:1;
+}
+
+#orderok{
+	width: 200rpx;
+	height: 55rpx;
+	margin-top: 10rpx;
+	margin-right: 10rpx;
+	right: 0;
+	border-radius: 30rpx;
+	background: #fff;
+	color:#f00;
+	text-align: center;
+	padding-top: 25rpx;
+}
+
+
+.hidd{
+	display: none;
+}
+
