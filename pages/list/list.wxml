@@ -1,0 +1,13 @@
+<!-- include/import引用文件 import可以使用目标文件中的特定模版 include相当于拷贝所以-->
+<import src="../common/common.wxml"/>
+<!-- 声明需要的使用的模板名,然后将模板所需要的data传入-->
+<template is="item" data="{{ list , loading }}"/>
+
+
+
+
+
+<!-- loading无论放在代码任何位置均无影响 -->
+	<loading hidden="{{!loading}}">
+	    拿命为您加载...
+	</loading>
