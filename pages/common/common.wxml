@@ -1,0 +1,22 @@
+<template name="item">
+	<view class="list">
+		<block wx:for="{{list}}" wx:key="list">
+			<view class="item">
+				<image src="{{item.picture}}" mode="aspectFill" width="64rpx" height="64rpx"/>
+				<view class="detail">
+					<title>{{item.name}}</title>
+					<price>￥{{item.price}} <old>￥{{item.old}}</old> </price>
+					<number>
+						<!-- 事件:bind/cache+type='function'  -->
+						<image src='../../images/subtract.png' catchtap="subNum" data-id="{{item.id}}" data-price="{{item.price}}" class="{{hidden}}"/>
+						<num> {{ item.number }} </num>
+						<image src='../../images/plus.png' catchtap="addNum" data-id="{{item.id}}" data-price="{{item.price}}" class="{{hidden}}"/>
+					</number> 
+				</view>
+			</view>
+		</block>
+	</view>
+
+	
+</template>
+
